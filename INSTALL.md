@@ -22,11 +22,9 @@ No clone on disk, but you re-run the command to update:
 
 ```bash
 mkdir -p ~/.claude/themes
-curl -o ~/.claude/themes/dracula.json \
+curl -fsSL -o ~/.claude/themes/dracula.json \
   https://raw.githubusercontent.com/dracula/claude-code-cli/main/Dracula.json
 ```
-
-Claude Code takes the theme's id from the filename, so keep it lowercase as `dracula.json`.
 
 #### Activating the theme
 
@@ -34,4 +32,4 @@ Claude Code takes the theme's id from the filename, so keep it lowercase as `dra
 2. Select **Dracula** from the list.
 3. Boom! It's working ✨
 
-Claude Code watches `~/.claude/themes/`, so the theme shows up without a restart. If that folder didn't exist before you created it, restart `claude` once.
+Claude Code watches the themes folder, so the theme shows up without a restart. If that folder didn't exist before you created it, restart `claude` once.

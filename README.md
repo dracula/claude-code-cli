@@ -10,7 +10,7 @@ Save `Dracula.json` into your Claude Code themes folder:
 
 ```bash
 mkdir -p ~/.claude/themes
-curl -o ~/.claude/themes/dracula.json \
+curl -fsSL -o ~/.claude/themes/dracula.json \
   https://raw.githubusercontent.com/dracula/claude-code-cli/main/Dracula.json
 ```
 

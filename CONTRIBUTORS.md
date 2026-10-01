@@ -20,10 +20,10 @@ That's why the community is essential for this project to keep evolving. Below a
 
 Themes on [draculatheme.com](https://draculatheme.com) show a preview image on their page. You can provide one or more screenshots in two ways:
 
-| Approach                                                 | When to use                                                                                   |
-| -------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [`screenshot.png`](screenshot.png) at the repo root      | A single preview is enough (default and simplest option).                                     |
-| A `screenshot/` folder with multiple images              | You want to show different views, platforms, or variants (e.g. editor, terminal, light/dark). |
+| Approach                                            | When to use                                                                                   |
+| --------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [`screenshot.png`](screenshot.png) at the repo root | A single preview is enough (default and simplest option).                                     |
+| A `screenshot/` folder with multiple images         | You want to show different views, platforms, or variants (e.g. editor, terminal, light/dark). |
 
 **Priority:** if the `screenshot/` folder contains at least one supported image, the website uses those files and ignores the root `screenshot.png`. If the folder is missing or empty, the site falls back to `screenshot.png`.
 

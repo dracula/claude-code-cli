@@ -6,12 +6,22 @@
 
 ## Install
 
-All instructions can be found at [draculatheme.com/claude-code-cli](https://draculatheme.com/claude-code-cli).
+Save `Dracula.json` into your Claude Code themes folder:
+
+```bash
+mkdir -p ~/.claude/themes
+curl -o ~/.claude/themes/dracula.json \
+  https://raw.githubusercontent.com/dracula/claude-code-cli/main/Dracula.json
+```
+
+Then run `claude`, enter `/theme`, and select **Dracula**. If you just created the `themes` folder, restart `claude` once so it picks it up.
+
+Needs Claude Code 2.1.118 or newer. Full instructions, including how to install with Git, are in [INSTALL.md](./INSTALL.md).
 
 > [!NOTE]
 > Dracula is already built into the Claude Code desktop app and [claude.ai](https://claude.ai).
 > See [draculatheme.com/claude-code](https://draculatheme.com/claude-code) for those.
-> The terminal app ships its own built-in themes and Dracula isn't one of them, so this port fills that gap.
+> The terminal app ships its own built-in themes.
 
 ## Team
 

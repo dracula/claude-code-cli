@@ -2,28 +2,29 @@
 
 This port adds the Dracula theme to the Claude Code CLI.
 
-Dracula is already built into the Claude Code desktop app and [claude.ai](https://claude.ai). If that's what you use, see [draculatheme.com/claude-code](https://draculatheme.com/claude-code) instead.
+Custom themes need Claude Code 2.1.118 or newer. Check yours with `claude --version`.
 
 #### Install using Git
 
-Clone the repository and link the theme so it stays up to date:
+Clone the repository and link the theme, so `git pull` is all you need to update it:
 
 ```bash
 git clone https://github.com/dracula/claude-code-cli.git
 mkdir -p ~/.claude/themes
-ln -s "$(pwd)/claude-code-cli/Dracula.json" ~/.claude/themes/dracula.json
+ln -sf "$(pwd)/claude-code-cli/Dracula.json" ~/.claude/themes/dracula.json
 ```
+
+The link points at the clone, so keep it where it is. If you move or delete it, the theme stops loading.
 
 #### Install manually
 
-Download the [GitHub `.zip` archive](https://github.com/dracula/claude-code-cli/archive/main.zip) and unzip it, or save [`Dracula.json`](./Dracula.json) directly. Then copy it into place:
+No clone on disk, but you re-run the command to update:
 
 ```bash
 mkdir -p ~/.claude/themes
-cp Dracula.json ~/.claude/themes/dracula.json
+curl -fsSL -o ~/.claude/themes/dracula.json \
+  https://raw.githubusercontent.com/dracula/claude-code-cli/main/Dracula.json
 ```
-
-Claude Code takes the theme's id from the filename, so keep it lowercase as `dracula.json`.
 
 #### Activating the theme
 
@@ -31,4 +32,4 @@ Claude Code takes the theme's id from the filename, so keep it lowercase as `dra
 2. Select **Dracula** from the list.
 3. Boom! It's working ✨
 
-Claude Code watches `~/.claude/themes/`, so the theme shows up without a restart. If that folder didn't exist before you created it, restart `claude` once.
+Claude Code watches the themes folder, so the theme shows up without a restart. If that folder didn't exist before you created it, restart `claude` once.

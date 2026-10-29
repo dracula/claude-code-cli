@@ -1,6 +1,5 @@
 {
   "name": "claude-code-cli",
-  "version": "1.0.0",
   "private": true,
   "description": "Dracula theme for the Claude Code CLI",
   "license": "MIT",
@@ -10,9 +9,25 @@
   },
   "scripts": {
     "format": "oxfmt .",
-    "format:check": "oxfmt --check ."
+    "format:check": "oxfmt --check .",
+    "release": "release-it"
   },
   "devDependencies": {
-    "oxfmt": "^0.71.0"
+    "oxfmt": "^0.71.0",
+    "release-it": "^19.2.4"
+  },
+  "release-it": {
+    "git": {
+      "requireBranch": "main",
+      "commit": false,
+      "tagName": "${version}"
+    },
+    "github": {
+      "release": true,
+      "web": true,
+      "releaseName": "${version}",
+      "autoGenerate": true
+    },
+    "npm": false
   }
 }
